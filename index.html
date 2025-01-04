@@ -1,15 +1,60 @@
-<html></html>
-<h1>
-        Hey, I'm NetworkChuck
-</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archie's Pages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .nav {
+            margin-top: 20px;
+        }
+        .nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: blue;
+            cursor: pointer;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
 <body>
-<h2>About me</h2>
-<p>
-            I am a coffee addict who makes vidoes sometimes.
-</p>
-<h2>What I'm working on</h2>
-<p>
-            I'm obsessed with AI right now and I'm working on the CPTS from HTB.
-</p>
+    <h1>Hello, my name is Archie</h1>
+    <div id="content">
+        <h2>Page 1</h2>
+        <p>Welcome to Page 1. Enjoy your visit!</p>
+    </div>
+    <div class="nav">
+        <a onclick="changePage(1)">Page 1</a>
+        <a onclick="changePage(2)">Page 2</a>
+        <a onclick="changePage(3)">Page 3</a>
+    </div>
+    <script>
+        function changePage(pageNumber) {
+            const content = document.getElementById('content');
+            if (pageNumber === 1) {
+                content.innerHTML = `
+                    <h2>Page 1</h2>
+                    <p>Welcome to Page 1. Enjoy your visit!</p>
+                `;
+            } else if (pageNumber === 2) {
+                content.innerHTML = `
+                    <h2>Page 2</h2>
+                    <p>This is Page 2. Great to see you here!</p>
+                `;
+            } else if (pageNumber === 3) {
+                content.innerHTML = `
+                    <h2>Page 3</h2>
+                    <p>You've reached Page 3. Come back anytime!</p>
+                `;
+            }
+        }
+    </script>
 </body>
 </html>
