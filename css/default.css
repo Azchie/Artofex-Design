@@ -1,0 +1,61 @@
+/* ===== default.css ===== */
+
+/* Font definitions */
+@font-face {
+    font-family: 'MillionDesignFont';
+    src: url('../Assets/MillionDesign.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+   
+  /* Global body styling */
+  body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+  
+  /* Left and right black borders */
+  body::before,
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    background-color: black;
+  }
+  
+  body::before {
+    left: 0;
+  }
+  
+  body::after {
+    right: 0;
+  }
+  
+  /* Scroll indicator */
+  .scroll-indicator {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    z-index: 999;
+    display: block;
+    visibility: hidden;
+  }
+  
+  body:has(:hover) .scroll-indicator {
+    visibility: visible;
+  }
+  
